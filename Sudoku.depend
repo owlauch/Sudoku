@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1503527856 source:c:\users\owlauch\desktop\sudoku++\sudoku\main.cpp
-	<iostream>
-	"matriz.h"
-
-1503528174 c:\users\owlauch\desktop\sudoku++\sudoku\matriz.h
-
