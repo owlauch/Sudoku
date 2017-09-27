@@ -19,9 +19,9 @@ int main(){
    desenhaTabela(matriz);
    do
    {
-    jogada(matriz);  
-   } while (ganhou());
+    jogada(matriz);
+    desenhaTabela(matriz);
+   } while (!ganhou());
    
-   desenhaTabela(matriz);
    return 0;
 }
