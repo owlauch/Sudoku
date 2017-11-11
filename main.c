@@ -10,18 +10,17 @@
 #include "defineNumero.h"
 #include "jogada.h"
 #include "ganhou.h"
-#include "nivel.h"
+#include "seletorDeNivel.h"
 
 int main(){
-   int matriz[9][9],nivelSelecionado;
-   nivelSelecionado = nivel();
-   criaMatriz(matriz, nivelSelecionado);
-   desenhaTabela(matriz);
-   do
-   {
-    jogada(matriz);
-    desenhaTabela(matriz);
-   } while (!ganhou());
+   int matriz[9][9]={0};
+   criaMatriz(matriz,nivel());
+   // desenhaTabela(matriz);
+   // do
+   // {
+   //  jogada(matriz);
+   //  desenhaTabela(matriz);
+   // } while (!ganhou(matriz));
    
    return 0;
 }

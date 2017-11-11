@@ -1,4 +1,4 @@
-int nivel (){
+int nivel(){
    int x;
    do
    {
