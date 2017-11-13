@@ -130,6 +130,7 @@ int quadrante(int mat[9][9], int valor, int linha, int coluna)
 int ver(int mat[9][9], int linha, int coluna, int valor)
 {
    int tem = 0;
+   tem = quadrante(mat, valor, linha, coluna);
    for (int i = 0; i < 9; i++)
    {
       if (i != coluna)
@@ -151,6 +152,5 @@ int ver(int mat[9][9], int linha, int coluna, int valor)
          }
       }
    }
-   tem = quadrante(mat, valor, linha, coluna);
    return tem;
 }
