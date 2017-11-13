@@ -6,10 +6,12 @@ int acertoEscolha()
    fflush(stdin);
    return defineNumero(x);
 }
+int ver();
 
-void jogada(int matriz[9][9])
+void jogada(int matriz[9][9], int n[9][9])
 {
-   int valor, x, y, escolha;
+   int valor, x, y, escolha,jgd;
+
    do
    {
       printf("\n linha: ");
@@ -28,28 +30,39 @@ void jogada(int matriz[9][9])
       valor = acertoEscolha();
    } while (((valor < 1) || (valor > 9)));
 
-   if (matriz[x - 1][y - 1] == 0)
+   if (n[x-1][y-1] == 0)
    {
-      matriz[x - 1][y - 1] = valor;
-   }
-
-   else if (matriz[x - 1][y - 1] > 0)
-   {
-      do
+      if (matriz[x - 1][y - 1] == 0)
       {
-         printf("Esse campo ja Possui valor \n");
-         printf("Deseja alteralo mesmo assim? \n");
-         printf("1-sim \n2-nao \n");
-         escolha = acertoEscolha();
-         if (escolha < 1 || escolha > 2)
-         {
-            printf("Escolha fora de escopo escolha entre '1' e '2' ");
-         }
-      } while (escolha < 1 || escolha > 2);
-
-      if (escolha == 1)
-      {
+         jgd=ver(matriz,x-1,y-1,valor);
+         if(jgd==0){
          matriz[x - 1][y - 1] = valor;
-      };
+         }
+      }
+      else if (matriz[x - 1][y - 1] > 0)
+      {
+         do
+         {
+            printf("Esse campo ja Possui valor \n");
+            printf("Deseja alteralo mesmo assim? \n");
+            printf("1-sim \n2-nao \n");
+            escolha = acertoEscolha();
+            if (escolha < 1 || escolha > 2)
+            {
+               printf("Escolha fora de escopo escolha entre '1' e '2' ");
+            }
+         } while (escolha < 1 || escolha > 2);
+
+         if (escolha == 1)
+         {
+            matriz[x - 1][y - 1] = valor;
+         };
+      }
+   }else
+   {
+      printf("Valor Fixo do Nivel nao e possivel fazer alteracao:\n");
+      system("pause");
    }
+   
+
 }

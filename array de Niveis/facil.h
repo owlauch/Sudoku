@@ -1,4 +1,4 @@
-void facil(int x[9][9])
+void facil(int x[9][9], int selecionado)
 {
    int um[9][9] = {
        {5, 9, 0, 0, 0, 0, 0, 1, 0},
@@ -103,4 +103,37 @@ void facil(int x[9][9])
        {1, 0, 0, 8, 0, 5, 0, 6, 7},
        {0, 4, 5, 0, 0, 1, 3, 0, 9},
        {7, 0, 0, 6, 4, 0, 0, 0, 5}};
+   switch (selecionado)
+   {
+   case 1:
+      copiaMatriz(x, um);
+      break;
+   case 2:
+      copiaMatriz(x, dois);
+      break;
+   case 3:
+      copiaMatriz(x, tres);
+      break;
+   case 4:
+      copiaMatriz(x, quatro);
+      break;
+   case 5:
+      copiaMatriz(x, cinco);
+      break;
+   case 6:
+      copiaMatriz(x, seis);
+      break;
+   case 7:
+      copiaMatriz(x, sete);
+      break;
+   case 8:
+      copiaMatriz(x, oito);
+      break;
+   case 9:
+      copiaMatriz(x, nove);
+      break;
+   case 10:
+      copiaMatriz(x, dez);
+      break;
+   }
 }

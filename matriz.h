@@ -1,11 +1,18 @@
 void ajustaNivel();
 void desenhaTabela();
+void facil();
+void copiaMatriz();
 void criaMatriz(int mtr[9][9], int nivelSele)
 {
+   time_t t;
+   int aleatorio;
+   srand((unsigned)time(&t));
+   aleatorio = rand() % 9;
+   aleatorio +=1;
    switch (nivelSele)
    {
    case 1:
-      ajustaNivel(mtr, 45);
+      facil(mtr, aleatorio);
       break;
    case 2:
       ajustaNivel(mtr, 40);

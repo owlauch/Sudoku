@@ -11,16 +11,22 @@
 #include "jogada.h"
 #include "ganhou.h"
 #include "seletorDeNivel.h"
+#include "array de Niveis/facil.h"
+#include "array de Niveis/medio.h"
+#include "array de Niveis/dificil.h"
+#include "array de Niveis/infernal.h"
+#include "array de Niveis/copiaMatriz.h"
 
 int main(){
-   int matriz[9][9]={0};
+   int matriz[9][9]={0}, n[9][9]={0};
    criaMatriz(matriz,nivel());
-   // desenhaTabela(matriz);
-   // do
-   // {
-   //  jogada(matriz);
-   //  desenhaTabela(matriz);
-   // } while (!ganhou(matriz));
+   copiaMatriz(n,matriz);
+   desenhaTabela(matriz);
+   do
+   {
+    jogada(matriz,n);
+    desenhaTabela(matriz);
+   } while (!ganhou(matriz));
    
    return 0;
 }
