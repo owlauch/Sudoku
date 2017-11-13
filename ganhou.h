@@ -15,6 +15,7 @@ int ganhou(int x[9][9])
 }
 int verquadrate(int mat[9][9], int c1, int c2, int l1, int l2, int valor)
 {
+
    for (int i = l1; i < l2; i++)
    {
       for (int j = c1; j < c2; j++)
@@ -25,6 +26,7 @@ int verquadrate(int mat[9][9], int c1, int c2, int l1, int l2, int valor)
          }
       }
    }
+   return 0;
 }
 void mensagemRegiao(int linha, int coluna, int valor)
 {
@@ -41,7 +43,7 @@ int quadrante(int mat[9][9], int valor, int linha, int coluna)
          result = verquadrate(mat, 0, 3, 0, 3, valor);
          if (result == 1)
          {
-            mensagemRegiao(linha,coluna,valor);
+            mensagemRegiao(linha, coluna, valor);
          }
          return result;
       };
@@ -50,7 +52,7 @@ int quadrante(int mat[9][9], int valor, int linha, int coluna)
          result = verquadrate(mat, 4, 6, 0, 3, valor);
          if (result == 1)
          {
-            mensagemRegiao(linha,coluna,valor);
+            mensagemRegiao(linha, coluna, valor);
          }
          return result;
       };
@@ -59,7 +61,7 @@ int quadrante(int mat[9][9], int valor, int linha, int coluna)
          result = verquadrate(mat, 7, 9, 0, 3, valor);
          if (result == 1)
          {
-            mensagemRegiao(linha,coluna,valor);
+            mensagemRegiao(linha, coluna, valor);
          }
          return result;
       };
@@ -71,7 +73,7 @@ int quadrante(int mat[9][9], int valor, int linha, int coluna)
          result = verquadrate(mat, 0, 3, 4, 6, valor);
          if (result == 1)
          {
-            mensagemRegiao(linha,coluna,valor);
+            mensagemRegiao(linha, coluna, valor);
          }
          return result;
       };
@@ -80,7 +82,7 @@ int quadrante(int mat[9][9], int valor, int linha, int coluna)
          result = verquadrate(mat, 4, 6, 4, 6, valor);
          if (result == 1)
          {
-            mensagemRegiao(linha,coluna,valor);
+            mensagemRegiao(linha, coluna, valor);
          }
          return result;
       };
@@ -89,7 +91,7 @@ int quadrante(int mat[9][9], int valor, int linha, int coluna)
          result = verquadrate(mat, 7, 9, 4, 6, valor);
          if (result == 1)
          {
-            mensagemRegiao(linha,coluna,valor);
+            mensagemRegiao(linha, coluna, valor);
          }
          return result;
       };
@@ -101,7 +103,7 @@ int quadrante(int mat[9][9], int valor, int linha, int coluna)
          result = verquadrate(mat, 0, 3, 7, 9, valor);
          if (result == 1)
          {
-            mensagemRegiao(linha,coluna,valor);
+            mensagemRegiao(linha, coluna, valor);
          }
          return result;
       };
@@ -110,7 +112,7 @@ int quadrante(int mat[9][9], int valor, int linha, int coluna)
          result = verquadrate(mat, 4, 6, 7, 9, valor);
          if (result == 1)
          {
-            mensagemRegiao(linha,coluna,valor);
+            mensagemRegiao(linha, coluna, valor);
          }
          return result;
       };
@@ -119,7 +121,7 @@ int quadrante(int mat[9][9], int valor, int linha, int coluna)
          result = verquadrate(mat, 7, 9, 7, 9, valor);
          if (result == 1)
          {
-            mensagemRegiao(linha,coluna,valor);
+            mensagemRegiao(linha, coluna, valor);
          }
          return result;
       };
@@ -134,7 +136,7 @@ int ver(int mat[9][9], int linha, int coluna, int valor)
       {
          if (mat[linha][i] == valor)
          {
-            printf("Linha %d, coluna %d: o numero %d ja esta presente nesta linha;\n", linha+1, coluna+1, valor);
+            printf("Linha %d, coluna %d: o numero %d ja esta presente nesta linha;\n", linha + 1, coluna + 1, valor);
             system("pause");
             tem = 1;
          }
@@ -143,7 +145,7 @@ int ver(int mat[9][9], int linha, int coluna, int valor)
       {
          if (mat[i][coluna] == valor)
          {
-            printf("Linha %d, coluna %d: o numero %d ja esta presente nesta coluna;\n", linha+1, coluna+1, valor);
+            printf("Linha %d, coluna %d: o numero %d ja esta presente nesta coluna;\n", linha + 1, coluna + 1, valor);
             system("pause");
             tem = 1;
          }

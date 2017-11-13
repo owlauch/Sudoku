@@ -34,6 +34,7 @@ void jogada(int matriz[9][9], int n[9][9])
    {
       if (matriz[x - 1][y - 1] == 0)
       {
+         jgd=0;
          jgd=ver(matriz,x-1,y-1,valor);
          if(jgd==0){
          matriz[x - 1][y - 1] = valor;
