@@ -28,5 +28,5 @@ int main(){
     desenhaTabela(matriz);
    } while (!ganhou(matriz));
    
-   return 0;
+   return 3;
 }

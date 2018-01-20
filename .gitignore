@@ -38,6 +38,8 @@ $RECYCLE.BIN/
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
+# Arquivos da aplicação a serem ignorados
+teste
 
 # Directories potentially created on remote AFP share
 .AppleDB
